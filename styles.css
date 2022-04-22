@@ -5,11 +5,10 @@
   --color--testimonial-background: hsl(219, 30%, 18%);
   --color--call-to-action-background--lighter: hsl(176, 68%, 64%);
   --color--call-to-action-background--darker: hsl(198, 60%, 50%);
-  --color--error: hsl(0, 100%, 63%);
-  --color--lightest: hsl(0, 0%, 100%);
-  --color--lighter: hsl(0, 0%, 90%);
-  --color--light: hsl(0, 0%, 70%);
-  --shell-padding: 3rem;
+  --color--lightest: hsl(218, 30%, 98%);
+  --color--lighter: hsl(218, 30%, 80%);
+  --color--light: hsl(218, 30%, 70%);
+  --shell-padding: 4rem;
   --full-width: 144rem;
   --full-width-padding-inline: calc(max(100% - var(--full-width), var(--shell-padding)) / 2);
 }
@@ -57,6 +56,7 @@ a {
 
 button {
   border: none;
+  cursor: pointer;
 }
 button.cta {
   background-image: linear-gradient(to bottom right, var(--color--call-to-action-background--lighter), var(--color--call-to-action-background--darker));
@@ -68,6 +68,10 @@ button.cta {
   font-family: Raleway, sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
+}
+button.cta:hover {
+  background-image: none;
+  background-color: var(--color--call-to-action-background--lighter);
 }
 
 img {
@@ -89,10 +93,16 @@ header nav .logo img {
   height: 3.2rem;
 }
 header nav ul {
-  color: var(--color--lighter);
   display: flex;
   gap: 3rem;
   font-family: Raleway, sans-serif;
+}
+header nav ul li a {
+  color: var(--color--lighter);
+}
+header nav ul li a:hover {
+  color: var(--color--lightest);
+  text-decoration: underline;
 }
 header img {
   position: relative;
@@ -127,7 +137,7 @@ main .hero {
 }
 main .hero h1 {
   font-family: Raleway, sans-serif;
-  font-size: 3.2rem;
+  font-size: calc(3rem + 1vw);
 }
 main .hero p {
   color: var(--color--lighter);
@@ -160,7 +170,7 @@ main .how-it-woks {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 8rem;
   padding-block: 16rem;
 }
 main .how-it-woks > img {
@@ -175,7 +185,7 @@ main .how-it-woks .info {
   gap: 2rem;
 }
 main .how-it-woks .info h2 {
-  font-size: calc(1rem + 3vw);
+  font-size: calc(3rem + 1vw);
 }
 main .how-it-woks .info a {
   color: var(--color--call-to-action-background--lighter);
@@ -186,6 +196,13 @@ main .how-it-woks .info a {
   padding-block: 1rem;
   border-block-end: 2px solid currentColor;
   font-size: 1.6rem;
+}
+main .how-it-woks .info a svg {
+  fill: currentColor;
+  width: 1em;
+}
+main .how-it-woks .info a:hover {
+  color: var(--color--lightest);
 }
 main #team {
   margin-block-end: 20rem;
@@ -207,12 +224,6 @@ main #team ul li {
   width: 0;
   padding: 3rem;
   border-radius: 0.5rem;
-}
-main #team ul li .quotes {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  width: 3rem;
 }
 main #team ul li p {
   grid-column: span 2;
@@ -239,6 +250,20 @@ main #team ul li .info .role {
   color: var(--color--lighter);
   font-size: 1.2rem;
 }
+main #team ul li .quotes {
+  --offset: -1rem;
+  position: absolute;
+  width: 3rem;
+}
+main #team ul li:first-of-type .quotes {
+  inset-block-start: var(--offset);
+  inset-inline-start: var(--offset);
+}
+main #team ul li:last-of-type .quotes {
+  inset-block-end: var(--offset);
+  inset-inline-end: var(--offset);
+  transform: rotate(180deg);
+}
 main #sign-in {
   background-color: var(--color--intro-background);
   box-shadow: 0 4px 0 hsla(0deg, 0%, 0%, 0.2);
@@ -246,7 +271,7 @@ main #sign-in {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  max-width: 80rem;
+  max-width: 100rem;
   margin: auto;
   padding: 3rem;
   border-radius: 0.5rem;
@@ -323,14 +348,18 @@ footer .info .lists .links {
   gap: 1rem;
 }
 footer .info .lists .links li {
+  color: var(--color--lighter);
   font-size: 2rem;
+}
+footer .info .lists .links li :hover {
+  color: var(--color--lightest);
 }
 footer .info .lists .social-medias {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-footer .info .lists .social-medias li {
+footer .info .lists .social-medias li a {
   display: grid;
   place-items: center;
   padding: 0.8rem;
@@ -338,10 +367,13 @@ footer .info .lists .social-medias li {
   border-radius: 999rem;
   font-size: 1.8rem;
 }
-footer .info .lists .social-medias li svg {
+footer .info .lists .social-medias li a svg {
   fill: currentColor;
   width: 1em;
   aspect-ratio: 1/1;
+}
+footer .info .lists .social-medias li a:hover {
+  color: var(--color--call-to-action-background--lighter);
 }
 
 /*# sourceMappingURL=styles.css.map */
