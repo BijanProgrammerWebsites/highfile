@@ -1,25 +1,17 @@
-name: Deployment Workflow
+name: Deploy
 on:
     push:
         branches: [master]
 
 jobs:
-    deply_job:
-        name: Deploy
-        runs-on: ubuntu-latest
+    deploy:
+        runs-on: self-hosted
+
         steps:
-            - name: Establish a Connection to Server and Update Website
-              uses: appleboy/ssh-action@master
-              with:
-                  host: 130.185.76.173
-                  username: root
-                  key: ${{secrets.SSH_KEY}}
-                  port: 22
-                  script: |
-                      cd /repos/projects-fylo
-                      git fetch
-                      git checkout master
-                      git reset --hard HEAD
-                      git pull origin master
-                      rm -rf /var/projects/bijanprogrammer.com/html/fylo
-                      cp -a . /var/projects/bijanprogrammer.com/html/fylo
+            - uses: actions/checkout@v3
+
+            - name: Move Files to Corresponding Folder
+              run: |
+                  rm -rf /var/www/projects.bijanprogrammer.com/html/fylo/
+                  mkdir -p /var/www/projects.bijanprogrammer.com/html/fylo/
+                  cp ./* /var/www/projects.bijanprogrammer.com/html/fylo/
