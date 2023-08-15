@@ -14,4 +14,4 @@ jobs:
               run: |
                   rm -rf /var/www/projects.bijanprogrammer.com/html/fylo/
                   mkdir -p /var/www/projects.bijanprogrammer.com/html/fylo/
-                  cp ./* /var/www/projects.bijanprogrammer.com/html/fylo/
+                  cp -a ./* /var/www/projects.bijanprogrammer.com/html/fylo/
