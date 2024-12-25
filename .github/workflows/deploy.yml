@@ -12,6 +12,6 @@ jobs:
 
             - name: Move Files to Corresponding Folder
               run: |
-                  rm -rf /var/www/projects.bijanprogrammer.com/html/fylo/
-                  mkdir -p /var/www/projects.bijanprogrammer.com/html/fylo/
-                  cp -a ./* /var/www/projects.bijanprogrammer.com/html/fylo/
+                  rm -rf /var/www/highfile.ir/html/
+                  mkdir -p /var/www/highfile.ir/html/
+                  cp -a ./* /var/www/highfile.ir/html/

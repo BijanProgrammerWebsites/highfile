@@ -1,6 +1,6 @@
-# Frontend Mentor - Fylo dark theme landing page
+# Frontend Mentor - HighFile dark theme landing page
 
-![Design preview for the Fylo dark theme landing page challenge](./design/desktop-preview.jpg)
+![Design preview for the HighFile dark theme landing page challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 

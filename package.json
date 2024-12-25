@@ -1,20 +1,20 @@
 {
-    "name": "fylo",
+    "name": "highfile",
     "version": "1.0.0",
     "scripts": {
         "sass:watch": "sass styles.scss:styles.css --watch"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BijanProgrammerWebsites/projects-fylo.git"
+        "url": "git+https://github.com/BijanProgrammerWebsites/highfile.git"
     },
     "keywords": [],
     "author": "BijanProgrammer",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/BijanProgrammerWebsites/projects-fylo/issues"
+        "url": "https://github.com/BijanProgrammerWebsites/highfile/issues"
     },
-    "homepage": "https://github.com/BijanProgrammerWebsites/projects-fylo#readme",
+    "homepage": "https://github.com/BijanProgrammerWebsites/highfile#readme",
     "devDependencies": {
         "prettier": "^2.6.2",
         "sass": "^1.50.1"
